@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		.svgLoader {
+			animation: spin 0.5s linear infinite;
+			margin: auto;
+		}
+
+		.divLoader {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/src/assets/logo.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PagePals</title>
+</head>
+
+<body>
+
+	<script type="module" src="/src/main.jsx"></script>
+	<script src="https://source.zoom.us/3.1.6/lib/vendor/lodash.min.js"></script>
+	<script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js'></script>
+	<script src='https://www.gstatic.com/firebasejs/8.0.0/firebase-messaging.js'></script>
+
+	<div id="root" style="position: unset;">
+		<div class="divLoader">
+			<svg class="svgLoader" viewBox="0 0 1024 1024" width="10em" height="10em">
+				<path fill="lightblue" d="M 512, 512 m -100, 0 a 100,100 0 1,0 200,0 a 100,100 0 1,0 -200,0" />
+			</svg>			
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

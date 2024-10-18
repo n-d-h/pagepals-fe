@@ -1,0 +1,92 @@
+// ----------------------------------------------------------------------
+
+const ROOTS = {
+  AUTH: '/auth',
+  DASHBOARD: '/dashboard',
+  MAIN: '/main',
+  GUEST: '/guest',
+};
+
+// ----------------------------------------------------------------------
+
+export const paths = {
+  // AUTH
+  auth: {
+    login: `${ROOTS.AUTH}/login`,
+    register: `${ROOTS.AUTH}/register`,
+    internalLogin: `${ROOTS.AUTH}/internal-login`,
+    forgotPassword: `${ROOTS.AUTH}/forgot-password`,
+    resetPassword: `${ROOTS.AUTH}/reset-password`,
+    verify: `${ROOTS.AUTH}/verify`,
+  },
+  // DASHBOARD
+  dashboard: {
+    root: ROOTS.DASHBOARD,
+    analytics: `${ROOTS.DASHBOARD}/analytics`,
+    staffManagement: `${ROOTS.DASHBOARD}/staff-management`,
+    settingManagement: `${ROOTS.DASHBOARD}/setting-management`,
+    customerManagement: `${ROOTS.DASHBOARD}/customer-management`,
+    readerManagement: `${ROOTS.DASHBOARD}/reader-management`,
+    readerRequestManagement: `${ROOTS.DASHBOARD}/request`,
+    readerRequestDetail: (id) => `${ROOTS.DASHBOARD}/request/${id}/detail`,
+    updateRequestManagement: `${ROOTS.DASHBOARD}/request/update`,
+    updateRequestDetail: (id) => `${ROOTS.DASHBOARD}/request/${id}/update`,
+    reportBookingManagement: `${ROOTS.DASHBOARD}/report`,
+    reportBookingDetail: (id) => `${ROOTS.DASHBOARD}/report/${id}/detail`,
+    viewRecording: (playUrl) => `${ROOTS.DASHBOARD}/report/view-recording/${playUrl}`,
+    reportReaderManagement: `${ROOTS.DASHBOARD}/report/reader`,
+    reportReaderDetail: (id) => `${ROOTS.DASHBOARD}/report/reader/${id}/detail`,
+    reportPostManagement: `${ROOTS.DASHBOARD}/report/post`,
+    reportPostDetail: (id) => `${ROOTS.DASHBOARD}/report/post/${id}/detail`,
+    withdrawalRequestManagement: `${ROOTS.DASHBOARD}/request/withdrawal`,
+    seminarManagement: `${ROOTS.DASHBOARD}/request/seminar`,
+  },
+  // MAIN
+  main: {
+    root: ROOTS.MAIN,
+    home: `${ROOTS.MAIN}/home`,
+    search: `${ROOTS.MAIN}/search`,
+    browse: `${ROOTS.MAIN}/browse`,
+    chat: `${ROOTS.MAIN}/chat`,
+    user: (id) => `${ROOTS.MAIN}/user/${id}/profile`,
+    profile: `${ROOTS.MAIN}/user/profile`,
+    meeting: (id) => `${ROOTS.MAIN}/meeting/${id}`,
+    book: (id) => `${ROOTS.MAIN}/book/${id}/detail`,
+    reader: `${ROOTS.MAIN}/reader`,
+    social: `${ROOTS.MAIN}/social`,
+    viewRecording: (playUrl) => `${ROOTS.MAIN}/view-recording/${playUrl}`,
+    viewRecordingWithAccessToken: (playUrl, accessToken) => `${ROOTS.MAIN}/view-recording/${playUrl}?accessToken=${accessToken}`,
+    becomeReader: `${ROOTS.MAIN}/become-a-reader`,
+    registerReader: `${ROOTS.MAIN}/become-a-reader/register`,
+    meetingZoom: `${ROOTS.MAIN}/meeting-zoom`,
+    service: (id) => `${ROOTS.MAIN}/service/${id}`,
+    editReader: `${ROOTS.MAIN}/reader/edit`,
+    schedule: `${ROOTS.MAIN}/reader/schedule`,
+    wallet: `${ROOTS.MAIN}/reader/wallet`,
+    seminar: `${ROOTS.MAIN}/reader/seminar`,
+    services: `${ROOTS.MAIN}/reader/services`,
+    calendar: `${ROOTS.MAIN}/reader/calendar`,
+    dashboard: `${ROOTS.MAIN}/reader/dashboard`,
+    event: `${ROOTS.MAIN}/event`,
+    eventDetail: (id) => `${ROOTS.MAIN}/event/${id}/detail`,
+    readerBookServices: (id) => `${ROOTS.MAIN}/reader/services/book/${id}`,
+    readerServiceDetail: (id) => `${ROOTS.MAIN}/reader/service/${id}`,
+    createService: `${ROOTS.MAIN}/reader/service/create`,
+    createServiceWithOldBook: (id, title) => `${ROOTS.MAIN}/reader/service/create?bookId=${id}&title=${title}`,
+    viewSeminar: (id) => `${ROOTS.MAIN}/reader/seminar/${id}/view`,
+    editSeminar: (id) => `${ROOTS.MAIN}/reader/seminar/${id}/edit`,
+    createSeminar: `${ROOTS.MAIN}/reader/seminar/create`,
+  },
+
+  guest: {
+    root: `${ROOTS.GUEST}`,
+    home: `${ROOTS.GUEST}/home`,
+    search: `${ROOTS.GUEST}/search`,
+    browse: `${ROOTS.GUEST}/browse`,
+    user: (id) => `${ROOTS.GUEST}/user/${id}/profile`,
+    book: (id) => `${ROOTS.GUEST}/book/${id}/detail`,
+    service: (id) => `${ROOTS.GUEST}/service/${id}`,
+    event: `${ROOTS.GUEST}/event`,
+    eventDetail: (id) => `${ROOTS.GUEST}/event/${id}/detail`,
+  },
+};
